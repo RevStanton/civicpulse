@@ -1,66 +1,38 @@
-CivicPulse
+# sv
 
-A transparent, open-source platform for real-time public sentiment.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-CivicPulse is a lightweight civic-tech tool that lets people register their positions on major issues through anonymous, verifiable voting. Every vote generates a public receipt and is stored in an append-only ledger for full transparency.
+## Creating a project
 
-CivicPulse is not a replacement for elections.
-It is a public accountability signal—a way to check the pulse of the people in moments when democratic norms are strained.
+If you're seeing this, you've probably already done this step. Congrats!
 
-Core Principles
+```sh
+# create a new project in the current directory
+npx sv create
 
-Open Source: All code, all logic, and all data structures are publicly visible.
+# create a new project in my-app
+npx sv create my-app
+```
 
-Transparency: Every vote is recorded in a public ledger.
+## Developing
 
-Anonymity: Votes are unlinkable to identities.
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-Verifiability: Users receive a receipt code they can later check in the ledger.
+```sh
+npm run dev
 
-Nonpartisan: CivicPulse serves democracy itself, not any political agenda.
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-MVP Features
+## Building
 
-One active public question at a time
+To create a production version of your app:
 
-Yes / No / Abstain voting
+```sh
+npm run build
+```
 
-Anonymous vote receipts
+You can preview the production build with `npm run preview`.
 
-Append-only public ledger
-
-Real-time tally display
-
-Built-in share tools (“Share your vote”)
-
-Tech Stack (MVP)
-
-Frontend: SvelteKit or Next.js
-
-Backend: Cloudflare Workers / Pages Functions
-
-Storage: Cloudflare KV or D1 (free tier)
-
-Deployment: Cloudflare Pages or Vercel (free tier)
-
-Roadmap
-
-v0.1 — Single-question MVP with ledger + receipts
-
-v0.2 — Fraud controls, ledger viewer, basic UI polish
-
-v0.3 — Multi-question support + public dashboard
-
-v0.4 — Open API for civic organizations
-
-v1.0 — Governance council + full transparency model
-
-Contributing
-
-CivicPulse will soon open for contributors who share the mission of strengthening democratic accountability through open technology.
-
-Stay tuned.
-
-License
-
-MIT License (open, permissive)
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
